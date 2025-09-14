@@ -15,6 +15,14 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Voice button variants
+        voice: "bg-primary text-primary-foreground hover:bg-primary-glow transition-all duration-300 hover:shadow-[0_0_40px_hsl(var(--primary)/0.3)]",
+        "voice-listening": "bg-voice-listening text-primary-foreground shadow-[0_0_60px_hsl(var(--voice-listening)/0.5)] animate-pulse",
+        "voice-processing": "bg-voice-processing text-primary-foreground",
+        "voice-success": "bg-voice-success text-primary-foreground",
+        "voice-error": "bg-voice-error text-primary-foreground",
+        // Glass button for hero sections
+        glass: "glass text-foreground hover:bg-card/80 border-border/50",
       },
       size: {
         default: "h-10 px-4 py-2",
