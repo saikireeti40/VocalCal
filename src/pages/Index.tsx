@@ -16,6 +16,8 @@ const Index = () => {
   const [lastTranscript, setLastTranscript] = useState('');
 
   const handleTranscript = (transcript: string) => {
+    if (!transcript) return;
+    
     setLastTranscript(transcript);
     
     // Simulate conflict detection for demo

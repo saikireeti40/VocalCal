@@ -40,10 +40,10 @@ export default function VoiceButton({ onTranscript, onStateChange, className }: 
 
     recognition.onresult = (event) => {
       const result = event.results[0];
-      const currentTranscript = result.transcript;
+      const currentTranscript = result?.transcript || '';
       setTranscript(currentTranscript);
       
-      if (result.isFinal) {
+      if (result.isFinal && currentTranscript) {
         updateState('processing');
         onTranscript?.(currentTranscript);
         
